@@ -1,61 +1,120 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel 12 Tutorial Project — Authentication & CRUD
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This repository is a **continuation** of my Laravel 12 learning journey, following step-by-step lessons to build on the basics learned in the [previous project](https://github.com/rasakmarsawa/laravel).  
 
-## About Laravel
+In this phase, the focus shifts to **authentication**, **CRUD operations**, and **admin-level features** — bringing the project closer to a real-world Laravel application.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The lessons are based on **Laravel Daily’s _From Scratch_ tutorial series**.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📚 Lesson Outline
 
-## Learning Laravel
+### Authentication and Starter Kits
+- **Starter Kits and Using Laravel Breeze** *(7:17)*
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### CRUD Operations
+- **Categories CRUD**: Index, Create, Update, Delete *(14:21)*
+- **Posts CRUD**: Performance and Debugbar *(9:22)*
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Admin & Middleware
+- **Admin User Setup**
+- **Route Groups and Middleware** *(4:55)*
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Validation
+- **Form Validation and Error Messages** *(5:02)*
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🔧 Learning Goals
+- Setting up **Laravel Breeze** for authentication (login, register, password reset).
+- Implementing **Categories CRUD** with routes, controllers, Blade views, and Eloquent.
+- Creating an **Admin user role** with route groups and middleware restrictions.
+- Implementing **Posts CRUD** while learning about performance improvements and debugging with **Laravel Debugbar**.
+- Adding **form validation** and displaying error messages using Blade components.
+- Continuing to practice clean **Git branching workflow**:
+  - `master` → production-ready branch  
+  - `develop` → active development branch  
+  - `feature/*` → isolated feature branches  
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🚀 How to Run (Quick Setup)
 
-## Contributing
+Clone the repository:
+```bash
+git clone https://github.com/yourusername/laravel-auth-crud.git
+cd laravel-auth-crud
+Install dependencies:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+bash
+Copy code
+composer install
+npm install && npm run dev
+Copy .env and run migrations:
 
-## Code of Conduct
+bash
+Copy code
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+Seed an admin user (optional):
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+bash
+Copy code
+php artisan db:seed
+Start the server:
 
-## Security Vulnerabilities
+bash
+Copy code
+php artisan serve
+Then open: http://localhost:8000 🚀
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+🌿 Git Workflow Example
+This project continues the same branching strategy:
 
-## License
+Start from the latest develop branch:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+bash
+Copy code
+git checkout develop
+git pull
+Create a new feature branch:
+
+bash
+Copy code
+git checkout -b feature/categories-crud
+Commit and merge:
+
+bash
+Copy code
+git add .
+git commit -m "Implement categories CRUD"
+git checkout develop
+git merge feature/categories-crud
+Release to master when stable:
+
+bash
+Copy code
+git checkout master
+git merge develop
+📝 Notes
+This project is educational and meant for practicing:
+
+Laravel authentication with Breeze
+
+CRUD with Eloquent & Blade
+
+Role-based access control (Admin vs User)
+
+Performance tools (Debugbar)
+
+Form validation & error handling
+
+Git workflows for teamwork
+
+📖 Source
+Tutorial source: Laravel Daily — Laravel From Scratch
+
+yaml
+Copy code
