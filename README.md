@@ -11,18 +11,18 @@ The lessons are based on **Laravel Daily’s _From Scratch_ tutorial series**.
 ## 📚 Lesson Outline
 
 ### Authentication and Starter Kits
-- **Starter Kits and Using Laravel Breeze** *(7:17)*
+- **Starter Kits and Using Laravel Breeze**
 
 ### CRUD Operations
-- **Categories CRUD**: Index, Create, Update, Delete *(14:21)*
-- **Posts CRUD**: Performance and Debugbar *(9:22)*
+- **Categories CRUD**: Index, Create, Update, Delete
+- **Posts CRUD**: Performance and Debugbar
 
 ### Admin & Middleware
 - **Admin User Setup**
-- **Route Groups and Middleware** *(4:55)*
+- **Route Groups and Middleware**
 
 ### Validation
-- **Form Validation and Error Messages** *(5:02)*
+- **Form Validation and Error Messages**
 
 ---
 
