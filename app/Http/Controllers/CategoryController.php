@@ -21,7 +21,7 @@ class CategoryController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {
+    {   
         return view('categories.create');
     }
 
@@ -30,6 +30,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([ 
+            'name' => ['required'],
+        ]);   
+
         Category::create([
             'name' => $request->input('name')
         ]);
@@ -58,6 +62,10 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
+        $request->validate([ 
+            'name' => ['required'],
+        ]);   
+
         $category->update([
             'name' => $request->input('name'),
         ]);
