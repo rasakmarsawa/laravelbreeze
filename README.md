@@ -96,7 +96,6 @@ This project continues the same branching strategy:
 4. Release to master when stable:
 
    ```bash
-   Copy code
    git checkout master
    git merge develop
 
@@ -110,5 +109,5 @@ This project is educational and meant for practicing:
     Form validation & error handling
     Git workflows for teamwork
 
-📖 Source
+## 📖 Source
 Tutorial source: Laravel Daily — Laravel From Scratch
