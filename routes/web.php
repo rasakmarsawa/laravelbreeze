@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PostController;
 use App\Http\Middleware\isAdminMiddleware;
 
 Route::get('/', function () {
@@ -19,8 +20,10 @@ Route::middleware('auth')->group(function () {
         return view('dashboard');
     })->middleware(['verified'])->name('dashboard');
 
-    Route::resource('categories', CategoryController::class)
-    ->middleware(IsAdminMiddleware::class);
+    Route::middleware(IsAdminMiddleware::class)->group(function (){
+        Route::resource('categories', CategoryController::class);
+        Route::resource('posts', PostController::class);
+    });
 });
 
 require __DIR__.'/auth.php';
