@@ -41,80 +41,74 @@ The lessons are based on **Laravel Daily’s _From Scratch_ tutorial series**.
 
 ## 🚀 How to Run (Quick Setup)
 
-Clone the repository:
-```bash
-git clone https://github.com/yourusername/laravel-auth-crud.git
-cd laravel-auth-crud
-Install dependencies:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/laravel-auth-crud.git
+   cd laravel-auth-crud
 
-bash
-Copy code
-composer install
-npm install && npm run dev
-Copy .env and run migrations:
+2. Install dependencies:
 
-bash
-Copy code
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
-Seed an admin user (optional):
+   ```bash
+   composer install
+   npm install && npm run dev
 
-bash
-Copy code
-php artisan db:seed
-Start the server:
+3. Copy .env and run migrations:
 
-bash
-Copy code
-php artisan serve
-Then open: http://localhost:8000 🚀
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   php artisan migrate
 
-🌿 Git Workflow Example
+4. Seed an admin user (optional):
+
+   ```bash
+   php artisan db:seed
+
+5. Start the server:
+
+   ```bash
+   php artisan serve
+
+6. Then open: http://localhost:8000 🚀
+
+## 🌿 Git Workflow Example
 This project continues the same branching strategy:
 
-Start from the latest develop branch:
+1. Start from the latest develop branch:
 
-bash
-Copy code
-git checkout develop
-git pull
-Create a new feature branch:
+   ```bash
+   git checkout develop
+   git pull
 
-bash
-Copy code
-git checkout -b feature/categories-crud
-Commit and merge:
+2. Create a new feature branch:
 
-bash
-Copy code
-git add .
-git commit -m "Implement categories CRUD"
-git checkout develop
-git merge feature/categories-crud
-Release to master when stable:
+   ```bash
+   git checkout -b feature/categories-crud
 
-bash
-Copy code
-git checkout master
-git merge develop
-📝 Notes
+3. Commit and merge:
+
+   ```bash
+   git add .
+   git commit -m "Implement categories CRUD"
+   git checkout develop
+   git merge feature/categories-crud
+
+4. Release to master when stable:
+
+   ```bash
+   Copy code
+   git checkout master
+   git merge develop
+
+## 📝 Notes
 This project is educational and meant for practicing:
 
-Laravel authentication with Breeze
-
-CRUD with Eloquent & Blade
-
-Role-based access control (Admin vs User)
-
-Performance tools (Debugbar)
-
-Form validation & error handling
-
-Git workflows for teamwork
+    Laravel authentication with Breeze
+    CRUD with Eloquent & Blade
+    Role-based access control (Admin vs User)
+    Performance tools (Debugbar)
+    Form validation & error handling
+    Git workflows for teamwork
 
 📖 Source
 Tutorial source: Laravel Daily — Laravel From Scratch
-
-yaml
-Copy code
