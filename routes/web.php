@@ -23,6 +23,7 @@ Route::middleware('auth')->group(function () {
     Route::middleware(IsAdminMiddleware::class)->group(function (){
         Route::resource('categories', CategoryController::class);
         Route::resource('posts', PostController::class);
+        Route::delete('/posts/{post}/remove-photo', [PostController::class, 'removePhoto'])->name('posts.removePhoto');
     });
 });
 

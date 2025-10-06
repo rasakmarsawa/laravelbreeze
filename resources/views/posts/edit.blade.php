@@ -19,7 +19,7 @@
                             </ul>
                         </div>
                     @endif                       
-                    <form method="POST" action="{{ route('posts.update',$post) }}" class="space-y-6">
+                    <form method="POST" action="{{ route('posts.update',$post) }}" class="space-y-6" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
@@ -36,7 +36,14 @@
                                 Text
                             </label>
                             <textarea name="text" id="text" class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500">{{$post->text}}</textarea>
-                        </div>                        
+                        </div>  
+                        <div>
+                            <label for="photo" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                Photo
+                            </label>
+                            <input type="file" name="photo" id="photo"
+                                class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>                                              
                         <div>
                             <div>
                                 <label for="category_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">

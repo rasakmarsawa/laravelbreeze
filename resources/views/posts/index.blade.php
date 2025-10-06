@@ -40,21 +40,10 @@
                                         </td>                                        
                                         <td class="px-6 py-4 text-sm text-right space-x-2">
                                             <!-- Edit button (secondary) -->
-                                            <a href="{{ route('posts.edit', $post) }}" 
+                                            <a href="{{ route('posts.show', $post) }}" 
                                                class="inline-block px-3 py-1 bg-yellow-500 text-white rounded-lg shadow hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-300">
-                                                Edit
-                                            </a>
-                                            
-                                            <!-- Delete button (danger) -->
-                                            <form action="{{ route('posts.destroy', $post) }}" method="POST" class="inline-block"
-                                                  onsubmit="return confirm('Are you sure you want to delete this post?');">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" 
-                                                        class="px-3 py-1 bg-red-600 text-white rounded-lg shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400">
-                                                    Delete
-                                                </button>
-                                            </form>
+                                                Show
+                                            </a>                                            
                                         </td>
                                     </tr>
                                 @endforeach
